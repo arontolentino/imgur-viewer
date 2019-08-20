@@ -8,7 +8,7 @@ const getters = {
   isLoggedIn: state => !!state.token
 };
 
-const action = {
+const actions = {
   login: () => {
     api.login();
   },
@@ -22,4 +22,11 @@ const mutations = {
   setToken: (state, token) => {
     state.token = token;
   }
+};
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations
 };
