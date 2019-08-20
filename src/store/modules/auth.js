@@ -6,6 +6,14 @@ const getters = {
   isLoggedIn: state => !!state.token
 };
 
-const action = {};
+const action = {
+  logout: ({ commit }) => {
+    commit('setToken', null);
+  }
+};
 
-const mutations = {};
+const mutations = {
+  setToken: (state, token) => {
+    state.token = token;
+  }
+};
