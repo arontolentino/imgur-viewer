@@ -16,15 +16,15 @@ const actions = {
   }
 };
 
+const mutations = {
+  setImages: (state, images) => {
+    state.images = images;
+  }
+};
+
 export default {
   state,
   getters,
   actions,
   mutations
-};
-
-const mutations = {
-  setImages: (state, images) => {
-    state.images = images;
-  }
 };

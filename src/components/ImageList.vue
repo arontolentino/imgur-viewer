@@ -1,12 +1,16 @@
 <template>
-  <div>Image list</div>
+  <div>
+    Image list
+    {{ allImages.length }}
+  </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'ImageList',
+  computed: mapGetters(['allImages']),
   methods: mapActions(['fetchImages']),
   created() {
     this.fetchImages();
