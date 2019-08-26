@@ -19,7 +19,7 @@ export default {
   fetchImages(token) {
     return axios.get(`${ROOT_URL}/3/account/me/images`, {
       headers: {
-        Authorizations: `Bearer ${token}`
+        Authorization: `Bearer ${token}`
       }
     });
   }

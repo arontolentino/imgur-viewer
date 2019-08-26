@@ -9,11 +9,18 @@ const getters = {
 };
 
 const actions = {
-  asycn fetchImages({ rootState }) {
+  async fetchImages({ rootState }) {
     const { token } = rootState.auth;
     const response = await api.fetchImages(token);
-    console.log(response;)
+    console.log(response);
   }
+};
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations
 };
 
 const mutations = {
